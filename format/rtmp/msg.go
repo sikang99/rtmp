@@ -225,7 +225,7 @@ func (c *Conn) readMsg() (msg *message, err error) {
 			if err = c.writeAck(c.ackn); err != nil {
 				return
 			}
-			if err = c.flushWrite(); err != nil {
+			if err = c.FlushWrite(); err != nil {
 				return
 			}
 			c.lastackn = c.ackn
@@ -280,7 +280,7 @@ func (c *Conn) readMsgHandleEvent() (msg *message, err error) {
 			return
 		}
 		if handled {
-			if err = c.flushWrite(); err != nil {
+			if err = c.FlushWrite(); err != nil {
 				return
 			}
 		} else {

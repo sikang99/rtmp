@@ -88,7 +88,7 @@ func (c *Conn) writePubPlayErrBeforeClose() {
 	c.Prepare(StageCommandDone, PrepareWriting)
 }
 
-func (c *Conn) flushWrite() error {
+func (c *Conn) FlushWrite() error {
 	return c.wrapRW.Flush()
 }
 

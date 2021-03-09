@@ -64,7 +64,7 @@ func (c *Conn) writeDataStart() (err error) {
 		}
 	}
 
-	if err = c.flushWrite(); err != nil {
+	if err = c.FlushWrite(); err != nil {
 		return
 	}
 
@@ -161,7 +161,7 @@ func (c *Conn) writePublishOrPlayResult(ok bool, msg string) (err error) {
 		}
 	}
 
-	if err = c.flushWrite(); err != nil {
+	if err = c.FlushWrite(); err != nil {
 		return
 	}
 
@@ -235,7 +235,7 @@ func (c *Conn) readConnect() (err error) {
 		return
 	}
 
-	if err = c.flushWrite(); err != nil {
+	if err = c.FlushWrite(); err != nil {
 		return
 	}
 
@@ -250,7 +250,7 @@ func (c *Conn) readConnect() (err error) {
 			if err = c.writeCommand(3, 0, "_result", cmd.transid, nil, c.avmsgsid); err != nil {
 				return
 			}
-			if err = c.flushWrite(); err != nil {
+			if err = c.FlushWrite(); err != nil {
 				return
 			}
 
@@ -334,7 +334,7 @@ func (c *Conn) writeConnect(path string) (err error) {
 		return
 	}
 
-	if err = c.flushWrite(); err != nil {
+	if err = c.FlushWrite(); err != nil {
 		return
 	}
 
@@ -380,7 +380,7 @@ func (c *Conn) connectPublish() (err error) {
 		return
 	}
 
-	if err = c.flushWrite(); err != nil {
+	if err = c.FlushWrite(); err != nil {
 		return
 	}
 
@@ -404,7 +404,7 @@ func (c *Conn) connectPublish() (err error) {
 		return
 	}
 
-	if err = c.flushWrite(); err != nil {
+	if err = c.FlushWrite(); err != nil {
 		return
 	}
 
@@ -442,7 +442,7 @@ func (c *Conn) connectPlay() (err error) {
 	if err = c.writeSetBufferLength(0, 100); err != nil {
 		return
 	}
-	if err = c.flushWrite(); err != nil {
+	if err = c.FlushWrite(); err != nil {
 		return
 	}
 
@@ -465,7 +465,7 @@ func (c *Conn) connectPlay() (err error) {
 	if err = c.writeCommand(4, c.avmsgsid, "play", 0, nil, playpath); err != nil {
 		return
 	}
-	if err = c.flushWrite(); err != nil {
+	if err = c.FlushWrite(); err != nil {
 		return
 	}
 

@@ -112,7 +112,7 @@ func (c *Conn) handshakeClient() (err error) {
 	if _, err = c.wrapRW.rw.Write(C0C1[:]); err != nil {
 		return
 	}
-	if err = c.flushWrite(); err != nil {
+	if err = c.FlushWrite(); err != nil {
 		return
 	}
 
@@ -191,7 +191,7 @@ func (c *Conn) handshakeServer() (err error) {
 	if _, err = c.wrapRW.rw.Write(S0S1S2); err != nil {
 		return
 	}
-	if err = c.flushWrite(); err != nil {
+	if err = c.FlushWrite(); err != nil {
 		return
 	}
 
