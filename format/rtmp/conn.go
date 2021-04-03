@@ -47,7 +47,7 @@ type Conn struct {
 
 	lastcmd *command
 
-	isserver   bool
+	IsServer   bool
 	Publishing bool
 	Stage      Stage
 
@@ -71,7 +71,7 @@ func NewConn(rw ReadWriteFlusher) *Conn {
 }
 
 func (c *Conn) writing() bool {
-	if c.isserver {
+	if c.IsServer {
 		return !c.Publishing
 	} else {
 		return c.Publishing

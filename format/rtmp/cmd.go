@@ -508,7 +508,7 @@ func (c *Conn) WritePacket(pkt av.Packet) (err error) {
 func (c *Conn) debugStage(flags int, goturl bool) {
 	if goturl {
 		var event string
-		if c.isserver {
+		if c.IsServer {
 			if c.Publishing {
 				event = "RtmpServerPublish"
 			} else {
@@ -536,7 +536,7 @@ func (c *Conn) Prepare(stage Stage, flags int) (err error) {
 	for c.Stage < stage {
 		switch c.Stage {
 		case StageInit:
-			if c.isserver {
+			if c.IsServer {
 				if err = c.handshakeServer(); err != nil {
 					return
 				}
@@ -549,7 +549,7 @@ func (c *Conn) Prepare(stage Stage, flags int) (err error) {
 			c.debugStage(flags, false)
 
 		case StageHandshakeDone:
-			if c.isserver {
+			if c.IsServer {
 				if err = c.readConnect(); err != nil {
 					return
 				}

@@ -52,7 +52,7 @@ func (s *Server) HandleNetConn(nc net.Conn) {
 		Writer: bufio.NewWriterSize(nc, BufioSize),
 	}
 	c := NewConn(rw)
-	c.isserver = true
+	c.IsServer = true
 
 	if fn := s.OnNewConn; fn != nil {
 		fn(c)
