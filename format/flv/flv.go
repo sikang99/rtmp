@@ -1,13 +1,13 @@
 package flv
 
 import (
-	"github.com/notedit/rtmp/codec/opus"
+	"github.com/sikang99/rtmp/codec/opus"
 	"io"
 	"io/ioutil"
 
-	"github.com/notedit/rtmp/av"
-	"github.com/notedit/rtmp/codec/aac"
-	"github.com/notedit/rtmp/format/flv/flvio"
+	"github.com/sikang99/rtmp/av"
+	"github.com/sikang99/rtmp/codec/aac"
+	"github.com/sikang99/rtmp/format/flv/flvio"
 )
 
 const SetDataFrame = "@setDataFrame"

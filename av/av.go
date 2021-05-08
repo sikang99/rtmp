@@ -2,11 +2,11 @@ package av
 
 import (
 	"fmt"
-	"github.com/notedit/rtmp/codec/opus"
+	"github.com/sikang99/rtmp/codec/opus"
 	"time"
 
-	"github.com/notedit/rtmp/codec/aac"
-	"github.com/notedit/rtmp/codec/h264"
+	"github.com/sikang99/rtmp/codec/aac"
+	"github.com/sikang99/rtmp/codec/h264"
 )
 
 const (

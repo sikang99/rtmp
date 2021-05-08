@@ -3,9 +3,9 @@ package rtmp
 import (
 	"fmt"
 
-	"github.com/notedit/rtmp/av"
-	"github.com/notedit/rtmp/format/flv"
-	"github.com/notedit/rtmp/format/flv/flvio"
+	"github.com/sikang99/rtmp/av"
+	"github.com/sikang99/rtmp/format/flv"
+	"github.com/sikang99/rtmp/format/flv/flvio"
 )
 
 const (

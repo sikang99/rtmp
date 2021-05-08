@@ -3,7 +3,7 @@ package pubsub
 import (
 	"bytes"
 	"context"
-	"github.com/notedit/rtmp/av"
+	"github.com/sikang99/rtmp/av"
 	"sync"
 	"sync/atomic"
 	"unsafe"
@@ -249,6 +249,3 @@ func (s *PubSub) SetPub(r av.PacketReader) {
 		seqmerge.do(pkt)
 	}
 }
-
-
-

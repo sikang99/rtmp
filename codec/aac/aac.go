@@ -6,7 +6,7 @@ import (
 	"io"
 	"time"
 
-	"github.com/notedit/rtmp/utils/bits"
+	"github.com/sikang99/rtmp/utils/bits"
 )
 
 // copied from libavcodec/mpeg4audio.h
