@@ -1,3 +1,5 @@
-module github.com/notedit/rtmp
+module github.com/sikang99/rtmp
 
-go 1.13
+go 1.16
+
+require github.com/notedit/rtmp v0.0.2
